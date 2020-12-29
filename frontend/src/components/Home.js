@@ -70,25 +70,23 @@ class Home extends Component {
         (page) => page.titlePage === this.state.page.titlePage
       )
     ) {
-      axios
-        .post(`http://localhost:3000/api/page/`, this.state.page)
-        .then((res) => {
-          this.setState({
-            pageList: [...this.state.pageList, res.data],
-          });
+      axios.post(`/api/page/`, this.state.page).then((res) => {
+        this.setState({
+          pageList: [...this.state.pageList, res.data],
         });
+      });
     }
   }
 
   componentDidMount() {
-    axios.get("http://localhost:3000/api/form").then((res) => {
+    axios.get("/api/form").then((res) => {
       const formList = res.data.map((o) => {
         return o.title;
       });
 
       this.setState({ formList });
     });
-    axios.get("http://localhost:3000/api/page").then((res) => {
+    axios.get("/api/page").then((res) => {
       const pageList = res.data;
       this.setState({ pageList });
     });

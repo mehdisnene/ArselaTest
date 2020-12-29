@@ -41,7 +41,7 @@ class Form extends Component {
       page: this.props.reff.page,
       data: this.state.data,
     };
-    axios.post(`http://localhost:3000/api/formData/`, data).then();
+    axios.post(`/api/formData/`, data).then();
   }
   render() {
     return (

@@ -18,9 +18,7 @@ class Search extends Component {
 
     if (this.state.searchByForm) {
       await axios
-        .get(
-          `http://localhost:3000/api/formData/byform/${this.state.itemSearched}`
-        )
+        .get(`/api/formData/byform/${this.state.itemSearched}`)
         .then((res) => {
           if (res.data.length === 0) {
             this.setState({
@@ -56,9 +54,7 @@ class Search extends Component {
         });
     } else {
       await axios
-        .get(
-          `http://localhost:3000/api/formData/bypage/${this.state.itemSearched}`
-        )
+        .get(`/api/formData/bypage/${this.state.itemSearched}`)
         .then((res) => {
           if (res.data.length === 0) {
             this.setState({

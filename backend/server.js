@@ -28,5 +28,5 @@ app.get("*", (req, res) => {
 const PORT = process.env.PORT || process.env.API_PORT;
 
 app.listen({ port: PORT }, () =>
-  console.log(`server has started at port ${process.env.PORT}`)
+  console.log(`server has started at port ${PORT}`)
 );

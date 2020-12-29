@@ -20,7 +20,7 @@ class CreateForm extends Component {
   }
   async componentDidMount() {
     axios
-      .get(`http://localhost:3000/api/form/${this.props.match.params.title}`)
+      .get(`/api/form/${this.props.match.params.title}`)
       .then((res) => {
         console.log(res.data);
         const data = res.data.data;
@@ -47,7 +47,7 @@ class CreateForm extends Component {
       title: this.props.match.params.title,
       data: this.state.data,
     };
-    axios.post(`http://localhost:3000/api/form/`, data).then((res) => {
+    axios.post(`/api/form/`, data).then((res) => {
       console.log(res);
       console.log(res.data);
     });
