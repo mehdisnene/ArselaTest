@@ -8,7 +8,7 @@ class CreatePage extends Component {
   }
   async componentDidMount() {
     axios
-      .get(`/api/page/${this.props.match.params.title}`)
+      .get(`http://localhost:3000/api/page/${this.props.match.params.title}`)
       .then((res) => {
         const page = res.data;
 
