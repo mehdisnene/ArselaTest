@@ -1,0 +1,17 @@
+{
+  "name": "arselaproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd backend && npm install && npm start",
+    "heroku-postbuild": "cd frontend  && npm install && npm run build"
+  },
+  "engines": {
+    "node": "12.20.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
